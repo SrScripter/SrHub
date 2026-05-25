@@ -1,6 +1,7 @@
 local Games = {
     [107646426076756] = "https://api.jnkie.com/api/v1/luascripts/public/f5bc287c296f86f4f0d1a4eabff4c1f86a6ead160b83901fc4caeaf7a1511c7e/download", -- Build A Ring Farm
     [114204398207377] = "https://api.jnkie.com/api/v1/luascripts/public/91e4437d4173aa8e00f83f904d2d2d9dde69dfe3730cbc03a77be6ca1e1bd341/download", -- Survive Zombie Arena
+    [9348272796] = "https://api.jnkie.com/api/v1/luascripts/public/91e4437d4173aa8e00f83f904d2d2d9dde69dfe3730cbc03a77be6ca1e1bd341/download", -- Survive Zombie Arena
     [93999763241813] = "https://api.jnkie.com/api/v1/luascripts/public/b96a745a5c9941c4a61c8c33100d230eef75b44933424f46938349b614995e0b/download", -- Roll an Anime
     [9792947201] = "https://api.jnkie.com/api/v1/luascripts/public/861fa4df6952224d2cac7423cd387475a9b8f9e2a5d6a2642044b20cc76a9648/download", -- SLIME RNG
 }
