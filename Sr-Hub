@@ -1,13 +1,12 @@
-local HttpGet = game.HttpGet
-local PlaceId: number = game.PlaceId
 
--- Dito kukunin ng script yung listahan ng mga laro mula sa SrHub repository mo
+local HttpGet = game.HttpGet
+local GameId: number = game.GameId
+
 local Games: {[number]: string} = loadstring(
   HttpGet(game, "https://raw.githubusercontent.com/SrScripter/SrHub/refs/heads/main/SR-Script-Hub")
 )() :: any
 
-local URL: string? = Games[PlaceId]
+local URL: string? = Games[GameId]
 if not URL then return end
 
--- Kapag nahanap ang ID ng laro, awtomatiko nitong ie-execute yung script link
 loadstring(HttpGet(game, URL))()
