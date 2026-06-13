@@ -1,0 +1,25 @@
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local Networking = require(ReplicatedStorage:WaitForChild("SharedModules"):WaitForChild("Networking"))
+local mouse = game.Players.LocalPlayer:GetMouse()
+local currentPlantId = nil
+local currentFruitId = nil
+
+mouse.Button1Down:Connect(function()
+    local target = mouse.Target
+    if target and target.Parent then
+        local plantId = target.Parent:GetAttribute("PlantId")
+        local fruitId = target.Parent:GetAttribute("FruitId")
+        if plantId and fruitId then
+            currentPlantId = plantId
+            currentFruitId = fruitId
+        end
+    end
+end)
+
+while task.wait() do
+    if currentPlantId and currentFruitId then
+        Networking.Garden.CollectFruit:Fire(currentPlantId, currentFruitId)
+        
+        Networking.NPCS.SellAll:Fire()
+    end
+end
